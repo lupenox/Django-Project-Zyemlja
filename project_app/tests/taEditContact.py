@@ -10,11 +10,11 @@ class MyTestCase(unittest.TestCase):
         pass
 
     def test_01(self):
-        # Must be an Instructor_ID
+        # Must be an TA_ID
         pass
 
     def test_02(self):
-        # Instructor_ID must be in the system
+        # TA_ID must be in the system
         pass
 
     # Pos
@@ -29,11 +29,11 @@ class MyTestCase(unittest.TestCase):
         pass
 
     def test_11(self):
-        # Must be an Instructor_ID
+        # Must be an TA_ID
         pass
 
     def test_12(self):
-        # Instructor_ID must be in the system
+        # TA_ID must be in the system
         pass
 
     # Pos
