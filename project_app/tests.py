@@ -27,3 +27,5 @@ class TATests(TestCase):
         assignments = MyUser.getTAAssignments("ta1")
         self.assertEqual(len(assignments), 1)
         self.assertEqual(assignments[0].course.name, "Algebra")
+
+    def test
