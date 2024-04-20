@@ -1,10 +1,10 @@
-import unittest
+import unittest, section
 from unittest.mock import Mock, patch
 
 
 class SectionTestCase(unittest.TestCase):
     def setUp(self):
-        mock = Mock(name="801", course="CS361", ta="Apoorv")
+        mock = Section(name="801", course="CS361", ta="Apoorv")
 
     def test_removeTA(self):
         self.assertTrue(mock.removeTA())
