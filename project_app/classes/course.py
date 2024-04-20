@@ -1,4 +1,5 @@
-from project_app.models import Course
+from project_app.classes.section import CourseSection
+from project_app.models import Course,User,Section
 
 
 class CourseClass:
@@ -21,12 +22,31 @@ class CourseClass:
     def get_instructors(self):
         return self.instructors
 
-    """
-    TODO
-        AddTA()
-        removeTA()
-        addSection()
-        removeSection()
-        getTAs()
-        getSections()
-    """
+    def addTAs(self, ta_ID):
+        if isinstance(ta_ID, User) & ta_ID.accountType == "TA":
+            self.ta.append(ta_ID)
+            return True
+        else:
+            return False
+
+    def removeTA(self, ta_ID):
+        if isinstance(ta_ID, User) & ta_ID.accountType == "TA":
+            self.ta.remove(ta_ID)
+            return True
+        else:
+            return False
+
+    def addSection(self, section_ID):
+        if isinstance(section_ID, CourseSection):
+            self.sections.append(section_ID)
+            return True
+        else:
+            return False
+
+    def removeSection(self, section_ID):
+        if isinstance(section_ID, CourseSection):
+            self.sections.remove(section_ID)
+            return True
+        else:
+            return False
+
