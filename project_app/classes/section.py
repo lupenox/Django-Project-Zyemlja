@@ -8,8 +8,8 @@ class CourseSection:
         self.ta = ta
 
     def removeTA(self):
-        self.ta = Null
-        if self.ta == Null:
+        self.ta = None
+        if self.ta == None:
             return true
         else:
             return false
