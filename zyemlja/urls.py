@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from project_app import views
 
+from project_app.views import Home
+
 urlpatterns = [
+    path('', Home.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('login/', views.loginView, name = 'loginView'),
     path('dashboard/', views.dashboardView, name = 'dashboardView'),
