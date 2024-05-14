@@ -41,7 +41,14 @@ th {
 </head>
 <body>
     <a href="{% url 'logout' %}">Logout</a>
-    <a href="{% url 'dashboard' %}">Back</a>
+    
+    {% if user.accountType == AccountType.admin %}
+        <a href="{% url 'AdminDashboard' %}">Back</a>
+    {% elif user.accountType == AccountType.instructor %}
+        <a href="{% url 'InstructorDashboard' %}">Back</a>
+    {% else %}
+        <a href="{% url 'TaDashboard' %}">Back</a>
+    {% endif %}
 
     <h1>Assign TA to Course and/or Section</h1>
     <form method="post">
